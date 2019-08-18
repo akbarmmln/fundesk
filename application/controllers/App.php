@@ -351,12 +351,6 @@ class App extends CI_Controller{
 		{
 			echo "<script>window.location.href='".base_url('app/dashboard')."';</script>";
 		}
-}
-
-	function logout()
-	{
-		$this->session->sess_destroy();
-		echo "<script>window.location.href='".base_url('login')."';</script>";
 	}
 
 	function getUser()
