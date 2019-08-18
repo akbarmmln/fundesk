@@ -40,13 +40,16 @@ class Api_ticket extends CI_Model{
 	{
         date_default_timezone_set('Asia/Jakarta');
 		$this->load->database();
-        $this->load->library('uuid');
-        $probid = $this->uuid->v4();
+		$this->load->library('uuid');
+		$this->db->trans_start();
+        $this->db->trans_strict(FALSE);
+
+		$probid = $this->uuid->v4();	
         $tiketnum = date("YHis" .gettimeofday()['usec']);
 		$repdate = date('Y-m-d');
 		$datetime = date('Y-m-d H:i:s');
 
-		$sqlidadmin = "SELECT user_id FROM users WHERE level = 1 ORDER BY RAND() LIMIT 1";
+		$sqlidadmin = "SELECT * FROM users WHERE level = 1 ORDER BY RAND() LIMIT 1";
 		$queryidadmin = $this->db->query($sqlidadmin);
 		$rowidadmin = $queryidadmin->result();
 		
@@ -57,7 +60,37 @@ class Api_ticket extends CI_Model{
 		$sql = "INSERT INTO problem_history (problem_history_id, problem_id, keterangan, tanggal_kegiatan) 
             VALUES ('".$this->uuid->v4()."', '".$probid."', 'Pembuatan Tiket Baru', '".$datetime."')";
 		$query = $this->db->query($sql);
-		return $query;
+
+        $this->db->trans_complete();
+        if ($this->db->trans_status() === FALSE) {
+            $this->db->trans_rollback();
+            return FALSE;
+        } 
+        else {
+			$this->db->trans_commit();
+			$strSubject="Resend Email Verification";
+			$message = 
+			"<html>
+				<body style='margin: 10px;'>
+					<div style='width: 1000px; font-family: Helvetica, sans-serif; font-size: 13px; padding:10px; line-height:150%; border:#eaeaea solid 10px;'>
+						
+						<strong>Terimakasih telah menggunakan fasilitas layanan Helpdesk</strong><br>
+						<b>Nomor Tiket : </b>".$tiketnum."<br>
+						<b>Ringkasan Permasalah : </b>".$ps."<br>
+						<b>Detail Permasalahan : </b>".$pd."<br>
+						<b>Pemegang Dokumen : </b>".$rowidadmin[0]->user_first_name.' '.$rowidadmin[0]->user_first_name."<br>
+					</div>
+				</body>
+			</html>";
+			$headers = 'MIME-Version: 1.0'."\n";
+			$headers .= 'Content-type: text/html; charset=iso-8859-1'."\n";
+			$headers .= "From:InfoHelpdesk Team infomail@fundesk.xyz";
+			
+			$mailsent = mail($this->input->post('email'),$strSubject,$message,$headers);
+
+			return TRUE;
+        }
+		// return $query;
 	}
 
 	function allTicketByLev($idssc)
