@@ -243,13 +243,26 @@ class Api_ticket extends CI_Model{
 		$this->load->database();
 		$this->load->library('uuid');
 		$datetime = date('Y-m-d H:i:s');
+		$this->db->trans_start();
+        $this->db->trans_strict(FALSE);
+
 		$sql = "UPDATE problems SET assign_to='".$assign."', switch_date='".$datetime."', problem_status = 'Switch Over' WHERE problem_id = '".$id."'";
 		$query = $this->db->query($sql);
 
 		$sql = "INSERT INTO problem_history (problem_history_id, problem_id, keterangan, tanggal_kegiatan) 
             VALUES ('".$this->uuid->v4()."', '".$id."', 'Penyerahan Tiket Kepada Staf Ahli', '".$datetime."')";
 		$query = $this->db->query($sql);
-		return $query;
+
+		$this->db->trans_complete();
+        if ($this->db->trans_status() === FALSE) {
+            $this->db->trans_rollback();
+            return FALSE;
+        } 
+        else {
+			$this->db->trans_commit();
+			return TRUE;
+		}
+		// return $query;
 	}
 
 	function openedTicket($id)
@@ -258,7 +271,9 @@ class Api_ticket extends CI_Model{
 		$this->load->database();
 		$this->load->library('uuid');
 		$datetime = date('Y-m-d H:i:s');
-		
+		$this->db->trans_start();
+        $this->db->trans_strict(FALSE);
+
 		$rowSetting = $this->setting();
 		$xp = $rowSetting[0]->poin_xp;
 		$rp = $rowSetting[0]->poin_rp;
@@ -290,7 +305,17 @@ class Api_ticket extends CI_Model{
 		$sql = "INSERT INTO problem_history (problem_history_id, problem_id, keterangan, tanggal_kegiatan) 
             VALUES ('".$this->uuid->v4()."', '".$id."', 'Pembukaan Tiket Oleh Staf Ahli', '".$datetime."')";
 		$query = $this->db->query($sql);
-		return $query;
+
+		$this->db->trans_complete();
+        if ($this->db->trans_status() === FALSE) {
+            $this->db->trans_rollback();
+            return FALSE;
+        } 
+        else {
+			$this->db->trans_commit();
+			return TRUE;
+		}
+		// return $query;
 	}
 
 	function solvedTicket($id, $res)
@@ -299,13 +324,26 @@ class Api_ticket extends CI_Model{
 		$this->load->database();
 		$this->load->library('uuid');
 		$datetime = date('Y-m-d H:i:s');
+		$this->db->trans_start();
+        $this->db->trans_strict(FALSE);
+
 		$sql = "UPDATE problems SET conclusion='".$res."', resolved_date='".$datetime."', problem_status = 'Solve' WHERE problem_id = '".$id."'";
 		$query = $this->db->query($sql);
 		
 		$sql = "INSERT INTO problem_history (problem_history_id, problem_id, keterangan, tanggal_kegiatan) 
             VALUES ('".$this->uuid->v4()."', '".$id."', 'Penyelesaian Tiket oleh Staff Ahli', '".$datetime."')";
 		$query = $this->db->query($sql);
-		return $query;
+
+		$this->db->trans_complete();
+        if ($this->db->trans_status() === FALSE) {
+            $this->db->trans_rollback();
+            return FALSE;
+        } 
+        else {
+			$this->db->trans_commit();
+			return TRUE;
+		}
+		// return $query;
 	}
 
 	function closedTicket($id, $res)
@@ -314,6 +352,8 @@ class Api_ticket extends CI_Model{
 		$this->load->database();
 		$this->load->library('uuid');
 		$datetime = date('Y-m-d H:i:s');
+		$this->db->trans_start();
+        $this->db->trans_strict(FALSE);
 
 		$getData = "SELECT reported_by, open_by, assign_to FROM problems WHERE problem_id = '".$id."'";
 		$queryData = $this->db->query($getData);
@@ -340,7 +380,17 @@ class Api_ticket extends CI_Model{
 		$sql = "INSERT INTO problem_history (problem_history_id, problem_id, keterangan, tanggal_kegiatan) 
             VALUES ('".$this->uuid->v4()."', '".$id."', 'Penolakan Pemberian Saran Tiket oleh Staff Ahli', '".$datetime."')";
 		$query = $this->db->query($sql);
-		return $query;
+
+		$this->db->trans_complete();
+        if ($this->db->trans_status() === FALSE) {
+            $this->db->trans_rollback();
+            return FALSE;
+        } 
+        else {
+			$this->db->trans_commit();
+			return TRUE;
+		}
+		// return $query;
 	}
 }
 ?>
