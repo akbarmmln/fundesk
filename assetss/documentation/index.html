@@ -1,0 +1,801 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Eagle | The Only Large Material Admin Template</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
+
+    <!--REQUIRED PLUGIN CSS-->
+    <link href="../plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
+    <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
+    <link href="../plugins/spinkit/spinkit.css" rel="stylesheet">
+
+    <!--THIS PAGE PLUGINS CSS-->
+    <link href="../plugins/prism/prism.css" rel="stylesheet">
+
+    <!--REQUIRED THEME CSS -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/layout.css" rel="stylesheet">
+    <link href="../assets/css/themes/main_theme.css" rel="stylesheet" />
+    <style>
+        .active{
+            background: #f2f2f2;
+        }
+        .credits ul li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body class="light theme-blue layout-fixed">
+<div class="wrapper">
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="sk-wave">
+                <div class="sk-rect sk-rect1 bg-cyan"></div>
+                <div class="sk-rect sk-rect2 bg-cyan"></div>
+                <div class="sk-rect sk-rect3 bg-cyan"></div>
+                <div class="sk-rect sk-rect4 bg-cyan"></div>
+                <div class="sk-rect sk-rect5 bg-cyan"></div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- top navbar-->
+    <header class="topnavbar-wrapper">
+        <nav role="navigation" class="navbar topnavbar">
+            <!-- START navbar header-->
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">
+                    <div class="brand-logo">
+                        <img src="../assets/images/logo.png" alt="Admin Logo" class="img-responsive">
+                    </div>
+                    <div class="brand-logo-collapsed">
+                        <img src="../assets/images/logo-single.png" alt="Admin Logo" class="img-responsive">
+                    </div>
+                </a>
+            </div>
+            <!-- END navbar header-->
+            <!-- START Nav wrapper-->
+            <div class="nav-wrapper">
+                <!-- START Left navbar-->
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#" data-trigger-resize="" data-toggle-state="aside-collapsed" class="hidden-xs">
+                            <em class="material-icons">menu</em>
+                        </a>
+                        <a href="#" data-toggle-state="aside-toggled" data-no-persist="true" class="visible-xs sidebar-toggle">
+                            <em class="material-icons">menu</em>
+                        </a>
+                    </li>
+                </ul>
+                <!-- END Left navbar-->
+            </div>
+            <!-- #END# Nav wrapper-->
+        </nav>
+        <!-- END Top Navbar-->
+    </header>
+    <!-- sidebar-->
+    <aside class="aside">
+        <!-- START Sidebar (left)-->
+        <div class="aside-inner">
+            <nav data-sidebar-anyclick-close="" class="sidebar">
+                <!-- START sidebar nav-->
+                <ul class="nav menu" id="sidebar">
+                    <!-- Iterates over all sidebar items-->
+                    <li class="nav-heading ">
+                        <span>DOCUMENTATION</span>
+                    </li>
+                    <li class="">
+                        <a href="#one" title="Dashboard" data-toggle="collapse">
+                            <em class="material-icons">adjust</em>
+                            <span>Introduction</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#two" title="Dashboard" data-toggle="collapse">
+                            <em class="material-icons">adjust</em>
+                            <span>File Structure</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#three" title="Dashboard" data-toggle="collapse">
+                            <em class="material-icons">adjust</em>
+                            <span>Installation Guide</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#four" title="Dashboard" data-toggle="collapse">
+                            <em class="material-icons">adjust</em>
+                            <span>Features</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#five" title="Dashboard" data-toggle="collapse">
+                            <em class="material-icons">adjust</em>
+                            <span>HTML Beginning</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#six" title="Dashboard" data-toggle="collapse">
+                            <em class="material-icons">adjust</em>
+                            <span>Pre loader</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#seven" title="Dashboard" data-toggle="collapse">
+                            <em class="material-icons">adjust</em>
+                            <span>Left & Right Sidebar</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#eight" title="Dashboard" data-toggle="collapse">
+                            <em class="material-icons">adjust</em>
+                            <span>Main Content & Footer</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#nine" title="Dashboard" data-toggle="collapse">
+                            <em class="material-icons">adjust</em>
+                            <span>Css</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#ten" title="Dashboard" data-toggle="collapse">
+                            <em class="material-icons">adjust</em>
+                            <span>Card</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#eleven" title="Dashboard" data-toggle="collapse">
+                            <em class="material-icons">adjust</em>
+                            <span>Helper Classes</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#twelve" title="Dashboard" data-toggle="collapse">
+                            <em class="material-icons">adjust</em>
+                            <span>Layout Options</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#thirteen" title="Dashboard" data-toggle="collapse">
+                            <em class="material-icons">adjust</em>
+                            <span>js</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#fourteen" title="Dashboard" data-toggle="collapse">
+                            <em class="material-icons">adjust</em>
+                            <span>Credits</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- END sidebar nav-->
+            </nav>
+        </div>
+        <!-- #END# Sidebar (left)-->
+    </aside>
+    <!-- Main section-->
+    <section>
+        <!-- Page content-->
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <div class="card" id="one">
+                    <div class="card-header">
+                        <h2>1. Introduction</h2>
+                    </div>
+                    <div class="body">
+                        <p><strong class="font-16">Eagle</strong> is the excellent responsive and multipurpose Admin Theme powered with <a href="http://getbootstrap.com" target="_blank">Bootstrap 3.x Framework</a> and <a href="https://material.google.com" target="_blank">Google Material Design</a>. Eagle can be used for any type of web applications dashboard: custom admin panels, admin dashboards, CMS, CRM, SAAS and websites: CMSs, SAAS, CRM, HRMS, Support & Social portal, e-commerce, personal business, corporate. Eagle has a minimal, sleek, clean and intuitive design which makes your next project look awesome and yet user friendly.
+                        </p>
+
+                        <p> Eagle is minimal, sleek, clean and lightweight which makes your next project look awesome and yet user friendly. Eagle has a huge collection of UI Elements, jQuery plugins and works seamlessly on all major web browsers, tablets and phones. User friendly, intuitive, and fun to use. We are keen to release continuous long term updates and lots of new features will be coming soon in the future releases. Once you purchased Eagle Admin, you will be entitled to free download of all future updates for the same license, Have look Eagle today!.
+                        </p>
+                    </div>
+                </div>
+                <div class="card" id="two">
+                    <div class="card-header">
+                        <h2>2. File Structure</h2>
+                    </div>
+                    <div class="body">
+                               <pre>
+    Eagle | Material Design Admin Template
+    ├─── assets
+    │   └─── css files
+    │   └─── images files
+    │   └─── js files
+    ├─── Pages
+    │   └─── HTML files
+    ├─── plugins
+    │   ├─── Jquery plugins
+    └─── Index File
+                                </pre>
+                    </div>
+                </div>
+                <div class="card" id="three">
+                    <div class="card-header">
+                        <h2>Installation Guide</h2>
+                    </div>
+                    <div class="body">
+                        <h4>Just simple steps to follow: </h4>
+                        <p class="p-t-10"><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> After unzip Theme Files, you will found Admin Theme & Documentation Folder.</p>
+                        <p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> You can view this Theme in any web browser from your desktop computer. Open <code>eagle/index.html</code> in your web browser. Because the files are written in HTML, you do not need an Internet connection in order to display or edit the Theme.</p>
+                        <p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Start your FTP client (I persoanlly use Filezila which is free) and login. Login to your server. You will need your server name (often times this will be your domain name), username, and password that you setup with the hosting company.</p>
+                        <p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Locate the domain folder you wish to upload your Theme files to on your server. You are going to want to click and drag every file that you have labeled .html, .css, .php, .js into your FTP client.</p>
+                        <p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i>As <b>eagle</b> designed for backend panel of your web platform, You need to implement yourself backend code in JAVA, PHP, .NET ,Ruby or any other as per your standers to view dynamic data and layout.</p>
+                        <p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Once the files are done uploading, rename the file you want to be your home page as 'index.html'.</p>
+                    </div>
+                </div>
+                <div class="card" id="four">
+                    <div class="card-header">
+                        <h2>Features</h2>
+                    </div>
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Bootstrap 3.x Framework</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Material Design</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Fully Responsive Design</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Html5 Markup &amp; CSS3</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Fully customizable</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Flat UI with clean style</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> 14 Material color Skins </p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Light & Dark Sidebar </p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Many type of layout option </p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Dashboard with profile widget, stats, charts and many more...</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Custom widgets</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Custom UI Tabs and Accordions</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> 1000+ UI Components</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Charts and Graphs (Morris, ChartJs, Sparkline, Flot, C3, Chartist, Nvd3, )</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Circle Dials (jQuery Knob)</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Advance Form Validation (jQuery Form Validation Plug-in)</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Tables (jQuery Data , Responsive , Js-grid , Foo-tables, Basic , Editable)</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Widgets (Box, Blog, Social, Data, Weather, Chart)</p></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Full Calendar (jQuery Full Calendar)</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Custom  Radio Buttons and Checkboxes</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Lots Of Plugins</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Lots Of Form Elements</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> 3000+ Fonts Icons</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Roboto Sans Google fonts</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Form Wizards</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Form Wizards</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Multi File Upload</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> E-commerce Widgets & pages</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Premium Chat Html version</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Login pages</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> 3 Types Of Timeline</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Invoice page</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> 3 Level Dropdown</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> 404 & 500 Error pages</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Well structured code</p></li>
+                                    <li><p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> Detailed Documentation</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="five">
+                    <div class="card-header">
+                        <h2>HTML Beginning</h2>
+                    </div>
+                    <div class="body">
+                        <p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> After unzip the Theme files you can see <code>eagle/pages/extra-page/blank.html</code> folder. That file contain the following common structure.
+                        </p>
+                        <p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> By using <code>blank.html</code> you are free to modify depending on the customization you require. If you would like to add/edit UI elements, Widget, Data Tables or charts.
+                        </p>
+                         <pre class="language-markup">
+<code  class="language-markup">
+ &lt;!DOCTYPE html&gt;
+ &lt;html lang="en"&gt;
+
+ &lt;head&gt;
+ &lt;meta charset="utf-8"&gt;
+ &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+ &lt;meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"&gt;
+ &lt;title&gt;Eagle | The Only Large Material Admin Template&lt;/title&gt;
+ &lt;!-- Favicon --&gt;
+ &lt;link rel="icon" href="favicon.png" type="image/x-icon"&gt;
+
+ &lt;!-- REQUIRED PLUGIN CSS --&gt;
+ &lt;link href="../plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"&gt;
+ &lt;link href="../plugins/bootstrap/css/bootstrap.css" rel="stylesheet"&gt;
+ &lt;link href="../plugins/node-waves/waves.css" rel="stylesheet"&gt;
+ &lt;link href="../plugins/animate-css/animate.css" rel="stylesheet"&gt;
+ &lt;link href="../plugins/spinkit/spinkit.css" rel="stylesheet"&gt;
+
+ &lt;!-- REQUIRED THEME CSS --&gt;
+ &lt;link href="../assets/css/style.css" rel="stylesheet"&gt;
+ &lt;link href="../assets/css/layout.css" rel="stylesheet"&gt;
+ &lt;link href="../assets/css/themes/main_theme.css" rel="stylesheet"&gt;
+
+ &lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+ &lt;!--[if lt IE 9]&gt;
+ &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+ &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
+ &lt;![endif]--&gt;
+ &lt;/head&gt;</code>
+                         </pre>
+                    </div>
+                </div>
+                <div class="card" id="six">
+                    <div class="card-header">
+                        <h2>Preloader</h2>
+                    </div>
+                    <div class="body">
+                        <p>This code is for the loader when page load</p>
+                        <pre class="language-markup">
+<code class="language-markup">
+&lt;div class="page-loader-wrapper"&gt;
+&lt;div class="loader"&gt;
+        &lt;div class="sk-wave"&gt;
+            &lt;div class="sk-rect sk-rect1 bg-cyan"&gt;&lt;/div&gt;
+            &lt;div class="sk-rect sk-rect2 bg-cyan"&gt;&lt;/div&gt;
+            &lt;div class="sk-rect sk-rect3 bg-cyan"&gt;&lt;/div&gt;
+            &lt;div class="sk-rect sk-rect4 bg-cyan"&gt;&lt;/div&gt;
+            &lt;div class="sk-rect sk-rect5 bg-cyan"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p&gt;Please wait...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="card" id="seven">
+                    <div class="card-header">
+                        <h2>Left Side Bar & Right Sidebar</h2>
+                    </div>
+                    <div class="body">
+                        <p>This code is for Left Side Bar & Right Sidebar</p>
+                        <pre class="language-markup" style="height:500px;">
+<code class="language-markup">
+&lt;!-- sidebar--&gt;
+&lt;aside class="aside"&gt;
+    &lt;!-- START Sidebar (left)--&gt;
+    &lt;div class="aside-inner"&gt;
+        &lt;nav data-sidebar-anyclick-close="" class="sidebar"&gt;
+            &lt;!-- START sidebar nav--&gt;
+            &lt;ul class="nav menu"&gt;
+                &lt;li&gt;
+                    &lt;a href="documentation/index.html" title="Documentation"&gt;
+                        &lt;em class="material-icons"&gt;whatshot&lt;/em&gt;
+                        &lt;span&gt;Documentation&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;!-- END sidebar nav--&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;!-- #END# Sidebar (left)--&gt;
+&lt;/aside&gt;
+&lt;!-- offsidebar--&gt;
+&lt;aside class="offsidebar hide"&gt;
+    &lt;!-- START Off Sidebar (right)--&gt;
+    &lt;nav&gt;
+        &lt;div role="tabpanel"&gt;
+            &lt;!-- Nav tabs--&gt;
+            &lt;ul role="tablist" class="nav nav-tabs nav-tabs-inline nav-justified"&gt;
+                &lt;li role="presentation" class="active"&gt;
+                    &lt;a href="#app-skins" aria-controls="app-settings" role="tab" data-toggle="tab"&gt;
+                        &lt;em class="material-icons"&gt;color_lens&lt;/em&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li role="presentation"&gt;
+                    &lt;a href="#app-settings" aria-controls="app-chat" role="tab" data-toggle="tab"&gt;
+                        &lt;em class="material-icons"&gt;settings&lt;/em&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;!-- Tab panes--&gt;
+            &lt;div class="tab-content"&gt;
+                &lt;div id="app-skins" role="tabpanel" class="tab-pane fade in active"&gt;
+                    &lt;ul class="skin_selector" id="sidebar_clr_selector"&gt;
+                        &lt;h2&gt;Sidebar Skins&lt;/h2&gt;
+                        &lt;li data-theme="light" class="active"&gt;
+                            &lt;div class="grey"&gt;&lt;/div&gt;
+                            &lt;span&gt;Light&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li data-theme="dark"&gt;
+                            &lt;div class="black"&gt;&lt;/div&gt;
+                            &lt;span&gt;Dark&lt;/span&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;ul class="skin_selector" id="skin_selector"&gt;
+                        &lt;h2&gt;Navbar Skins&lt;/h2&gt;
+                        &lt;li data-theme="red"&gt;
+                            &lt;div class="red"&gt;&lt;/div&gt;
+                            &lt;span&gt;Red&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li data-theme="pink"&gt;
+                            &lt;div class="pink"&gt;&lt;/div&gt;
+                            &lt;span&gt;Pink&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li data-theme="purple"&gt;
+                            &lt;div class="purple"&gt;&lt;/div&gt;
+                            &lt;span&gt;Purple&lt;/span&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div id="app-settings" role="tabpanel" class="tab-pane fade"&gt;
+                    &lt;div class="demo-settings "&gt;
+                        &lt;ul class="setting-list"&gt;
+                            &lt;h2&gt;Layout Settings&lt;/h2&gt;
+                            &lt;li&gt;
+                                &lt;span&gt;Fixed&lt;/span&gt;
+                                &lt;div class="switch"&gt;
+                                    &lt;label&gt;&lt;input id="chk-fixed" type="checkbox"  data-toggle-state="layout-fixed"&gt;&lt;span class="lever switch-col-grey"&gt;&lt;/span&gt;&lt;/label&gt;
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;span&gt;Boxed&lt;/span&gt;
+                                &lt;div class="switch"&gt;
+                                    &lt;label&gt;&lt;input id="chk-boxed" type="checkbox" data-toggle-state="layout-boxed"&gt;&lt;span class="lever switch-col-grey"&gt;&lt;/span&gt;&lt;/label&gt;
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;span&gt;Collapsed&lt;/span&gt;
+                                &lt;div class="switch"&gt;
+                                    &lt;label&gt;&lt;input id="chk-collapsed" type="checkbox" data-toggle-state="aside-collapsed"&gt;&lt;span class="lever switch-col-grey"&gt;&lt;/span&gt;&lt;/label&gt;
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;span&gt;Collapsed Text&lt;/span&gt;
+                                &lt;div class="switch"&gt;
+                                    &lt;label&gt;&lt;input id="chk-collapsed-text" type="checkbox" data-toggle-state="aside-collapsed-text"&gt;&lt;span class="lever switch-col-grey"&gt;&lt;/span&gt;&lt;/label&gt;
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;!-- #END# Off Sidebar (right)--&gt;
+&lt;/aside&gt;
+</code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="card" id="eight">
+                    <div class="card-header">
+                        <h2>Main Content & Footer</h2>
+                    </div>
+                    <div class="body">
+                        <p>This code is for page content & footer</p>
+                        <pre class="language-markup">
+<code class="language-markup">
+&lt;!-- Main section--&gt;
+&lt;section&gt;
+    &lt;!-- Page content--&gt;
+    &lt;div class="content-wrapper"&gt;
+        &lt;div class="container-fluid"&gt;
+            &lt;div class="page-header"&gt;
+                &lt;h2&gt;Blank Page&lt;/h2&gt;
+                &lt;ol class="breadcrumb"&gt;
+                    &lt;li&gt;&lt;a href="../../index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="active"&gt;Pages&lt;/li&gt;
+                &lt;/ol&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- FOOTER--&gt;
+&lt;footer&gt;
+    &lt;span&gt;&copy; 2017 - Eagle Template By &lt;b class="col-blue"&gt;Bylancer&lt;/b&gt;&lt;/span&gt;
+&lt;/footer&gt;
+</code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="card" id="nine">
+                    <div class="card-header">
+                        <h2>Css</h2>
+                    </div>
+                    <div class="body">
+                        <p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> After unzip the Theme files you can see <code>eagle/assets/css</code> folder. That css folder contains color,lib,pre-load.css & style.css
+                        </p>
+                        <p><i class="material-icons font-20 v-align-middle">keyboard_arrow_right</i> I am using one main CSS file name is style.css in this theme which you are free to modify depending on the customization you require.
+                            If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.
+                        </p>
+                        <pre class="language-css">
+<code class="language-css">
+    @import url(materialize.css);
+    @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic-ext,latin-ext);
+    @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+    body {
+    background-color: #f2f2f2;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    font-family: 'Roboto', sans-serif;
+    }
+
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    text-shadow: rgba(0, 0, 0, .15) 0 0 1px;
+    }
+
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #424242;
+    }
+
+    h6, .h6 {
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="card" id="ten">
+                    <div class="card-header">
+                        <h2>Card</h2>
+                    </div>
+                    <div class="body">
+                      <p>This is code structure for card.</p>
+                        <pre class="language-markup">
+<code class="language-markup">
+    &lt;div class="card"&gt;
+        &lt;div class="card-header"&gt;
+            &lt;h2&gt;
+                Static Control
+            &lt;/h2&gt;
+            &lt;small&gt;Card Description Here..&lt;/small&gt;
+            &lt;ul class="card-controls m-r-5"&gt;
+                &lt;li&gt;&lt;a href="javascript:void(0);" class="card-fullscreen"&gt;&lt;i class="material-icons"&gt;fullscreen&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="javascript:void(0);" class="card-collapse"&gt;&lt;i class="material-icons"&gt;expand_more&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="javascript:void(0);" class="card-refresh"&gt;&lt;i class="material-icons"&gt;loop&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="javascript:void(0);" class="card-remove"&gt;&lt;i class="material-icons"&gt;close&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="body"&gt;
+            etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="card" id="eleven">
+                    <div class="card-header">
+                        <h2>Helper Classes</h2>
+                    </div>
+                    <div class="body">
+                        <p>Please checkout helper classes by click on below button</p>
+                        <a href="../pages/basic-ui/helper-classes.html" class="btn btn-primary"> Check Out Here</a>
+                    </div>
+                </div>
+                <div class="card" id="twelve">
+                    <div class="card-header">
+                        <h2>Layout Option</h2>
+                    </div>
+                    <div class="body">
+                        <p>There are many layout option you can easily choose your favourite option</p>
+                        <table class="table table-bordered m-t-20">
+                            <tbody><tr>
+                                <td>Fixed layout</td>
+                                <td>Just add class <code>.layout-fixed</code> to body tag</td>
+                            </tr>
+                            <tr>
+                                <td>Boxed layout</td>
+                                <td>Just add class <code>.layout-boxed</code> to body tag</td>
+                            </tr>
+                            <tr>
+                                <td>Collapsed Sidebar</td>
+                                <td>Just add class <code>.aside-collapsed</code> to body tag</td>
+                            </tr>
+                            <tr>
+                                <td>Collapsed Text</td>
+                                <td>Just add class <code>.aside-collapsed-text</code> to body tag</td>
+                            </tr>
+                            <tr>
+                                <td>Float</td>
+                                <td>Just add class <code>.aside-float</code> to body tag</td>
+                            </tr>
+                            </tbody></table>
+                    </div>
+                </div>
+                <div class="card" id="thirteen">
+                    <div class="card-header">
+                        <h2>js</h2>
+                    </div>
+                    <div class="body">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th style="width: 30%;">Js</th>
+                                <th>Use of it</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>jquery.js</code>, <code>bootstrap.js</code>, <code>waves.js, jquery.slimscroll.js</code> </td>
+                                <td> These are main file for theme. Slimscroll for smooth scroll and wave is for wave-effect of button or other elements</td>
+                            </tr>
+                            <tr>
+                                <td><code>screenfull.js</code> </td>
+                                <td> This is used for full screen</td>
+                            </tr>
+                            <tr>
+                                <td><code>layout.js</code> </td>
+                                <td> This is main file for layout option</td>
+                            </tr>
+                            <tr>
+                                <td><code>demo.js</code> </td>
+                                <td> This is main file for skin and side bar colors</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card" id="fourteen">
+                    <div class="card-header">
+                        <h2>Credits</h2>
+                    </div>
+                    <div class="body credits">
+                        <ul>
+                            <li># Front-end framework :
+                                <ul>
+                                    <li><a href="http://getbootstrap.com/" target="_blank">Bootstrap 3.7</a></li>
+                                </ul>
+                            </li>
+
+                            <li># Scripts :
+                                <ul>
+                                    <li><a href="http://jquery.com/" target="_blank">jQuery library</a>
+                                        - <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap 3.7</a>
+                                        - <a href="http://rocha.la/jQuery-slimScroll" target="_blank">jquery slimscroll</a>
+                                        -<a href="https://github.com/jnicol/trackpad-scroll-emulator" target="_blank">Trackpad Scroll</a>
+                                        -<a href="http://materializecss.com" target="_blank">Materialize css</a>
+                                        -<a href="https://daneden.github.io/animate.css/" target="_blank">Animate css</a>
+                                        -<a href="https://refreshless.com/nouislider/download/" target="_blank">Nouislider</a>
+                                        -<a href="http://ionden.com/a/plugins/ion.rangeSlider/en.html" target="_blank">Range slider</a>
+                                        -<a href="https://www.jstree.com/" target="_blank">Tree view</a>
+                                        -<a href="https://alertifyjs.org" target="_blank">Alertify</a>
+                                        -<a href="https://github.com/makeusabrew/bootbox" target="_blank">Bootbox</a>
+                                        -<a href="http://sydcanem.com/bootstrap-contextmenu/" target="_blank">Context menu</a>
+                                        -<a href="http://sachinchoolur.github.io/lightGallery/" target="_blank">Image Gallery</a>
+                                        -<a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">Light Box</a>
+                                        -<a href="https://masonry.desandro.com/" target="_blank">Masonry</a>
+                                        -<a href="http://codeseven.github.io/toastr/" target="_blank">Toastr</a>
+                                        -<a href="http://ckeditor.com/" target="_blank">CKEditor</a>
+                                        -<a href="http://www.chartjs.org/" target="_blank">Chartjs</a>
+                                        -<a href="http://rendro.github.io/easy-pie-chart/" target="_blank">jQuery Easy Pie Chart</a>
+                                        -<a href="http://omnipotent.net/jquery.sparkline" target="_blank">jQuery Sparklines</a>
+                                        -<a href="http://www.oesmith.co.uk/morris.js/" target="_blank">Morris</a>
+                                        -<a href="http://www.owlgraphic.com/owlcarousel" target="_blank">jQuery OwlCarousel v1.21</a>
+                                        -<a href="http://www.datatables.net/blog/Twitter_Bootstrap_2" target="_blank">DataTables</a>
+                                        -<a href="http://anthonyterrien.com/knob/" target="_blank">jQuery Knob</a>
+                                        -<a href="http://arshaw.com/fullcalendar/" target="_blank">FullCalendar</a>
+                                        -<a href="http://boedesign.com/demos/gritter/" target="_blank">Gritter Notifications</a>
+                                        -<a href="http://jqueryui.com/slider/" target="_blank">jQuery Slider</a>
+                                        - <a href="https://github.com/flesler/jquery.scrollTo" target="_blank">jquery scrollTo</a>
+                                        -<a href="http://www.eyecon.ro/bootstrap-datepicker/" target="_blank">Datepicker for Bootstrap</a>
+                                        -<a href="http://www.eyecon.ro/bootstrap-colorpicker/" target="_blank">Colorpicker for Bootstrap</a>
+                                        -<a href="https://github.com/dangrossman/bootstrap-daterangepicker" target="_blank">Date Range Picker for Bootstrap</a>
+                                        -<a href="http://xoxco.com/clickable/jquery-tags-input" target="_blank">jQuery Tags Input</a>
+                                        -<a href="http://jqueryvalidation.org/" target="_blank">jQuery Validation Plugin</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li># Fonts :
+                                <ul>
+                                    <li> <a href="https://fonts.google.com/" target="_blank">roboto font</a> </li>
+                                </ul>
+                            </li>
+
+                            <li># Font icons :
+                                <ul>
+                                    <li><a href="http://fontawesome.io" target="_blank">Font Awesome 3.1.0</a>
+                                        – <a href="http://glyphicons.com/" target="_blank">Glyphicons</a>
+                                        – <a href="https://github.com/ionic-team/ionicons" target="_blank">Ion Icons</a>
+                                        – <a href="https://github.com/google/material-design-icons/" target="_blank">Material Icons</a>
+                                        – <a href="https://github.com/ionic-team/ionicons" target="_blank">Ion Icons</a>
+                                        – <a href="http://themify.me/themify-icons" target="_blank">Themify Icons</a>
+                                        – <a href="http://erikflowers.github.io/weather-icons/" target="_blank">Weather Icons</a>
+                                        – <a href="https://www.pixeden.com/icon-fonts/stroke-7-icon-font-set" target="_blank">7 Stroke</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <p>Once again, thank you so much for purchasing this theme. I'd be glad to help you if you have any questions relating to this theme. I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the support forums and asking your question in the <a href="#">Item Discussion</a> section.</p>
+                        <ul class="m-t-20">
+                            <li>By: Bylancer</li>
+                            <li>Contact: <a href="mailto:helpdesk.bylancer@gmail.com">helpdesk.bylancer@gmail.com</a></li>
+                            <li>Demo: <a target="_blank" href="http://eagle-material-admin.bylancer.com">http://eagle-material-admin.bylancer.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER-->
+    <footer>
+        <span>&copy; 2017 - Eagle Template By <b class="col-blue">Bylancer</b></span>
+    </footer>
+</div>
+<!-- CORE PLUGIN JS -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<script src="../plugins/bootstrap/js/bootstrap.js"></script>
+<script src="../plugins/modernizr/modernizr.custom.js"></script>
+<script src="../plugins/screenfull/dist/screenfull.js"></script>
+<script src="../plugins/jQuery-Storage-API/jquery.storageapi.js"></script>
+<script src="../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script src="../plugins/node-waves/waves.js"></script>
+
+<!--THIS PAGE PLUGINS JS-->
+<script src="../plugins/prism/prism.js"></script>
+
+<!-- LAYOUT JS -->
+<script src="../assets/js/demo.js"></script>
+<script src="../assets/js/layout.js"></script>
+
+<script>
+    $('#sidebar a').click(function(e) {
+        e.stopPropagation();
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top - 100
+        }, 500);
+        return false;
+    });
+    // This is auto select left sidebar
+    // Cache selectors
+    // Cache selectors
+    var lastId,
+            topMenu = $("#sidebar"),
+            topMenuHeight = topMenu.outerHeight(),
+    // All list items
+            menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+            scrollItems = menuItems.map(function() {
+                var item = $($(this).attr("href"));
+                if (item.length) {
+                    return item;
+                }
+            });
+    // Bind to scroll
+    $(window).scroll(function() {
+        // Get container scroll position
+        var fromTop = $(this).scrollTop() + topMenuHeight;
+
+        // Get id of current scroll item
+        var cur = scrollItems.map(function() {
+            if ($(this).offset().top < fromTop)
+                return this;
+        });
+        // Get the id of the current element
+        cur = cur[cur.length - 1];
+        var id = cur && cur.length ? cur[0].id : "";
+
+        if (lastId !== id) {
+            lastId = id;
+            // Set/remove active class
+            menuItems
+                    .removeClass("active")
+                    .filter("[href='#" + id + "']").addClass("active");
+        }
+    });
+</script>
+</body>
+
+</html>
