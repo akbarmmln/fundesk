@@ -72,23 +72,25 @@ class Api_ticket extends CI_Model{
         } 
         else {
 			$this->db->trans_commit();
-			$strSubject="Resend Email Verification";
+			$strSubject = "Pengajuan Layanan ";
 			$message = 
 			"<html>
 				<body style='margin: 10px;'>
 					<div style='width: 1000px; font-family: Helvetica, sans-serif; font-size: 13px; padding:10px; line-height:150%; border:#eaeaea solid 10px;'>
 						
-						<strong>Terimakasih telah menggunakan fasilitas layanan Helpdesk</strong><br>
+						<strong>Yang terhormat Bapak/Ibu/Saudara/i .$rowidadmin[0]->user_first_name.' '.$rowidadmin[0]->user_last_name. , pengajuan layanan anda sudah berhasil tersimpan. Berikut data pengajuan layanan anda :</strong><br>
 						<b>Nomor Tiket : </b>".$tiketnum."<br>
 						<b>Ringkasan Permasalah : </b>".$ps."<br>
 						<b>Detail Permasalahan : </b>".$pd."<br>
-						<b>Pemegang Dokumen : </b>".$rowidadmin[0]->user_first_name.' '.$rowidadmin[0]->user_first_name."<br>
+						<b>Pemegang Dokumen : </b>".$rowidadmin[0]->user_first_name.' '.$rowidadmin[0]->user_last_name."<br>
+						<br>
+						<b>Layanan yang anda ajukan akan segera di proses secepatnya oleh petugas kami. Terimakasih telah menggunakan fasilitas layanan Helpdesk.</b>
 					</div>
 				</body>
 			</html>";
 			$headers = 'MIME-Version: 1.0'."\n";
 			$headers .= 'Content-type: text/html; charset=iso-8859-1'."\n";
-			$headers .= "From:InfoHelpdesk Team infomail@fundesk.xyz";
+			$headers .= "From:Info Helpdesk Team infomail@fundesk.xyz";
 			
 			$mailsent = mail($rowuser[0]->user_email,$strSubject,$message,$headers);
 
