@@ -166,7 +166,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Nomor HP (format: xxxx-xxxx-xxxx)</label>
-                                            <input type="number" class="form-control" name="notelp" placeholder="Nomor HP" pattern="^\d{4}-\d{4}-\d{4}$" value="<?php echo $result['data'][0]->user_phone;?>" required/>
+                                            <input type="text" class="form-control" name="notelp" placeholder="Nomor HP" pattern="^\d{4}-\d{4}-\d{4}$" value="<?php echo $result['data'][0]->user_phone;?>" required/>
                                         </div>
                                         <div class="form-group">
                                             <label>Email</label>
