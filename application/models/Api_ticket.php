@@ -53,6 +53,10 @@ class Api_ticket extends CI_Model{
 		$queryidadmin = $this->db->query($sqlidadmin);
 		$rowidadmin = $queryidadmin->result();
 		
+		$sqluser = "SELECT * FROM users WHERE user_id = '".$id_user."'";
+		$querysqluser = $this->db->query($sqluser);
+		$rowuser = $querysqluser->result();
+
 		$sql = "INSERT INTO problems (problem_id, tiket_number, id_category, reported_date, reported_by, telp, problem_summary, problem_detail, problem_site, problem_file, problem_status, open_by) 
             VALUES ('".$probid."', '".$tiketnum."', '".$idcat."', '".$datetime."', '".$id_user."', '".$telp."', '".$ps."', '".$pd."', '".$site."', '".$image."', 'New', '".$rowidadmin[0]->user_id."')";
 		$query = $this->db->query($sql);
@@ -86,7 +90,7 @@ class Api_ticket extends CI_Model{
 			$headers .= 'Content-type: text/html; charset=iso-8859-1'."\n";
 			$headers .= "From:InfoHelpdesk Team infomail@fundesk.xyz";
 			
-			$mailsent = mail($this->input->post('email'),$strSubject,$message,$headers);
+			$mailsent = mail($rowuser[0]->user_email,$strSubject,$message,$headers);
 
 			return TRUE;
         }
