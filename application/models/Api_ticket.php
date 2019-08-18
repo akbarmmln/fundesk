@@ -77,7 +77,6 @@ class Api_ticket extends CI_Model{
 			"<html>
 				<body style='margin: 10px;'>
 					<div style='width: 1000px; font-family: Helvetica, sans-serif; font-size: 13px; padding:10px; line-height:150%; border:#eaeaea solid 10px;'>
-						
 						<p>Yang terhormat Bapak/Ibu/Saudara/i ".$rowuser[0]->user_first_name." ".$rowuser[0]->user_last_name.", pengajuan layanan anda sudah berhasil tersimpan. Berikut data pengajuan layanan anda :</p>
 						<b>Nomor Tiket : </b>".$tiketnum."<br>
 						<b>Ringkasan Permasalah : </b>".$ps."<br>
