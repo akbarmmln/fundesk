@@ -90,7 +90,8 @@ class App extends CI_Controller{
 			$nrrperunsur = $totalskor / $datajumlahresponden;
 			$nilaiikm = $nrrperunsur * $bobotratatertimbang;
 			$roundikm = round($nilaiikm,3);
-			
+			$roundnrrperunsur = round($nrrperunsur, 3);
+
 			$footerikm += $nilaiikm;
 			$footerstp += $stp;
 			$footertp += $tp;
@@ -104,7 +105,7 @@ class App extends CI_Controller{
 				<td class='text-center' style='vertical-align : middle;text-align:center;'>$tp</td>
 				<td class='text-center' style='vertical-align : middle;text-align:center;'>$p</td>
 				<td class='text-center' style='vertical-align : middle;text-align:center;'>$sp</td>
-				<td class='text-center' style='vertical-align : middle;text-align:center;'>$nrrperunsur</td>
+				<td class='text-center' style='vertical-align : middle;text-align:center;'>$roundnrrperunsur</td>
 				<td class='text-center' style='vertical-align : middle;text-align:center;'>$roundikm</td>
 			</tr>";
 			$i++;
