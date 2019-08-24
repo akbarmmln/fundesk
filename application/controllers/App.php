@@ -32,8 +32,6 @@ class App extends CI_Controller{
 			<th colspan='4' class='text-center' style='vertical-align : middle;text-align:center;'>Frekuensi Kepuasan</th>
 			<th rowspan='2' class='text-center' style='vertical-align : middle;text-align:center;'>Nilai IKM</th>
 			<th rowspan='2' class='text-center' style='vertical-align : middle;text-align:center;'>Konversi IKM</th>
-			<th rowspan='2' class='text-center' style='vertical-align : middle;text-align:center;'>Mutu Layanan</th>
-			<th rowspan='2' class='text-center' style='vertical-align : middle;text-align:center;'>Kinerja Unit</th>
 		</tr>
 		<tr>
 			<th width='5%' class='text-center' style='vertical-align : middle;text-align:center;'>STP</th>
@@ -121,15 +119,23 @@ class App extends CI_Controller{
 			<th class='text-center' style='vertical-align : middle;text-align:center;'>$footertp</th>
 			<th class='text-center' style='vertical-align : middle;text-align:center;'>$footerp</th>
 			<th class='text-center' style='vertical-align : middle;text-align:center;'>$footersp</th>
-			<th class='warning text-center' colspan='4'></th>
+			<th class='warning text-center' colspan='2'></th>
 		</tr>
 			<tr class='success'>
-			<th class='text-center' colspan='6' style='vertical-align : middle;text-align:center;'>Mutu Layanan</th>
-			<th class='text-center' style='vertical-align : middle;text-align:center;'>$roundfootikm</th>
+			<th class='text-center' colspan='7' style='vertical-align : middle;text-align:center;'>Konversi IKM</th>
 			<th class='text-center' style='vertical-align : middle;text-align:center;'>$roundfootkonvikm</th>
+		</tr>
+		</tr>
+			<tr class='success'>
+			<th class='text-center' colspan='7' style='vertical-align : middle;text-align:center;'>Mutu Layanan</th>
 			<th class='text-center' style='vertical-align : middle;text-align:center;'>$footernilai[mutu]</th>
+		</tr>
+		</tr>
+			<tr class='success'>
+			<th class='text-center' colspan='7' style='vertical-align : middle;text-align:center;'>Mutu Layanan</th>
 			<th class='text-center' style='vertical-align : middle;text-align:center;'>$footernilai[kinerja]</th>
-		</tr>";
+		</tr>
+		";
 		echo "</tbody>";
 	}
 	
