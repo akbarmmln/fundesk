@@ -90,6 +90,11 @@ class App extends CI_Controller{
 			$roundikm = round($nilaiikm,3);
 			$roundnrrperunsur = round($nrrperunsur, 3);
 
+			$totalnrrperunsur += $nrrperunsur;
+			$roundnpu = round($totalnrrperunsur, 3);
+			$totalnilaiikm += $nilaiikm;
+			$roundnkm = round($totalnilaiikm, 3);
+
 			$footerikm += $nilaiikm;
 			$footerstp += $stp;
 			$footertp += $tp;
@@ -119,7 +124,8 @@ class App extends CI_Controller{
 			<th class='text-center' style='vertical-align : middle;text-align:center;'>$footertp</th>
 			<th class='text-center' style='vertical-align : middle;text-align:center;'>$footerp</th>
 			<th class='text-center' style='vertical-align : middle;text-align:center;'>$footersp</th>
-			<th class='warning text-center' colspan='2'></th>
+			<th class='text-center' style='vertical-align : middle;text-align:center;'>$roundnpu</th>
+			<th class='text-center' style='vertical-align : middle;text-align:center;'>$roundnkm</th>
 		</tr>
 			<tr class='success'>
 			<th class='text-center' colspan='7' style='vertical-align : middle;text-align:center;'>Konversi IKM</th>
@@ -132,7 +138,7 @@ class App extends CI_Controller{
 		</tr>
 		</tr>
 			<tr class='success'>
-			<th class='text-center' colspan='7' style='vertical-align : middle;text-align:center;'>Mutu Layanan</th>
+			<th class='text-center' colspan='7' style='vertical-align : middle;text-align:center;'>Kinerja Layanan</th>
 			<th class='text-center' style='vertical-align : middle;text-align:center;'>$footernilai[kinerja]</th>
 		</tr>
 		";
