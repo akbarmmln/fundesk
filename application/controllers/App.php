@@ -22,6 +22,9 @@ class App extends CI_Controller{
 	function datasurvey()
 	{
 		$result = $this->api_survey->all();
+		$dataur = $this->api_survey->getUraian();
+		$bobotratatertimbang = 1/$dataur['hasil'];
+
 		echo "<thead>
 		<tr>
 			<th rowspan='2' style='vertical-align : middle;text-align:center;'>No</th>
@@ -85,16 +88,14 @@ class App extends CI_Controller{
 			$skorsp = $sp * 4;
 			$totalskor = $skorstp + $skortp + $skorp + $skorsp;
 			$nilaiikm = $totalskor / $datajumlahresponden;
-			$konversiikm = $nilaiikm * 25;
-
+			$nilaiikm = $nilaiikm * $bobotratatertimbang;
+			$roundikm = round($nilaiikm,3);
+			
 			$footerikm += $nilaiikm;
 			$footerstp += $stp;
 			$footertp += $tp;
 			$footerp += $p;
 			$footersp += $sp;
-			$nilai = $this->api_survey->konversi($konversiikm);
-			$roundikm = round($nilaiikm,3);
-			$roundkonvikm = round($konversiikm,3);
 
 			echo "<tr>
 				<td>$i</td>
@@ -104,13 +105,9 @@ class App extends CI_Controller{
 				<td class='text-center' style='vertical-align : middle;text-align:center;'>$p</td>
 				<td class='text-center' style='vertical-align : middle;text-align:center;'>$sp</td>
 				<td class='text-center' style='vertical-align : middle;text-align:center;'>$roundikm</td>
-				<td class='text-center' style='vertical-align : middle;text-align:center;'>$roundkonvikm</td>
-				<td class='text-center' style='vertical-align : middle;text-align:center;'>$nilai[mutu]</td>
-				<td class='text-center' style='vertical-align : middle;text-align:center;'>$nilai[kinerja]</td>
 			</tr>";
 			$i++;
 		}
-		$footerikm = $footerikm / $jumlahpertanyaan;
 		$footerkonversiikm = $footerikm * 25;
 		$footernilai = $this->api_survey->konversi($footerkonversiikm);
 		$roundfootikm = round($footerikm,3);
